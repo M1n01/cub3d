@@ -6,7 +6,7 @@
 /*   By: rtakashi <rtakashi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/03 17:00:26 by minabe            #+#    #+#             */
-/*   Updated: 2023/09/24 18:56:13 by rtakashi         ###   ########.fr       */
+/*   Updated: 2023/09/30 14:16:41 by rtakashi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,7 +149,6 @@ typedef struct s_game
 }	t_game;
 
 bool		is_cub_file(char *filename);
-size_t		count_map_width(char *map);
 int			count_map_height(char **file);
 bool		check_wall(t_map *map);
 bool		check_map(t_map *map);

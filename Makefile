@@ -13,10 +13,41 @@ B_INCDIR	=	./includes_bonus ./libft
 B_INC	=	$(addprefix -I,$(B_INCDIR))
 
 SRCSDIR = ./srcs
-SRCS	=	$(shell find $(SRCSDIR) -name "*.c" | xargs)
+SRCS	=	$(SRCSDIR)/game/game.c \
+			$(SRCSDIR)/main.c \
+			$(SRCSDIR)/map/check_map.c \
+			$(SRCSDIR)/map/flood_fill.c \
+			$(SRCSDIR)/map/free_2d.c \
+			$(SRCSDIR)/map/map.c \
+			$(SRCSDIR)/map/read_file.c \
+			$(SRCSDIR)/player/field_of_view.c \
+			$(SRCSDIR)/player/player.c \
+			$(SRCSDIR)/player/player_utils.c \
+			$(SRCSDIR)/utils/my_mlx_pixel_put.c \
+			$(SRCSDIR)/utils/trigonometric_function.c \
+			$(SRCSDIR)/utils/vector_utils.c \
+			$(SRCSDIR)/window/color.c \
+			$(SRCSDIR)/window/draw_window.c \
+			$(SRCSDIR)/window/texture.c
 
 BONUSDIR = ./bonus
-BONUS	=	$(shell find $(BONUSDIR) -name "*.c" | xargs)
+BONUS	=	$(BONUSDIR)/game/event_bonus.c \
+			$(BONUSDIR)/game/game_bonus.c \
+			$(BONUSDIR)/main_bonus.c \
+			$(BONUSDIR)/map/check_map_bonus.c \
+			$(BONUSDIR)/map/flood_fill_bonus.c \
+			$(BONUSDIR)/map/free_2d.c \
+			$(BONUSDIR)/map/map_bonus.c \
+			$(BONUSDIR)/map/read_file_bonus.c \
+			$(BONUSDIR)/player/field_of_view_bonus.c \
+			$(BONUSDIR)/player/player_bonus.c \
+			$(BONUSDIR)/player/player_utils_bonus.c \
+			$(BONUSDIR)/utils/my_mlx_pixel_put_bonus.c \
+			$(BONUSDIR)/utils/trigonometric_function_bonus.c \
+			$(BONUSDIR)/utils/vector_utils_bonus.c \
+			$(BONUSDIR)/window/color_bonus.c \
+			$(BONUSDIR)/window/draw_window_bonus.c \
+			$(BONUSDIR)/window/texture_bonus.c
 
 OBJSDIR = ./objs
 OBJS	=	$(patsubst $(SRCSDIR)/%.c,$(OBJSDIR)/%.o,$(SRCS))
